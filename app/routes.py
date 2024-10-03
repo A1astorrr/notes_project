@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from .models import Note, NoteCreate, NoteUpdate
+from .schemas import Note, NoteCreate, NoteUpdate
 
 router = APIRouter(prefix="/notes")
 
