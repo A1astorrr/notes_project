@@ -8,9 +8,5 @@ __pycache__/
 .vscode
 .idea
 
-#django stuff
-db.sqlite3
-media/
-
-#tailwind stuff
-node_modules/
+#db stuff
+.notes.db

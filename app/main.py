@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from .datebase import engine, Base
-from .models import NoteDB
+from .routes import router as note_router
 
 app = FastAPI()
+
+Base.metadata.create_all(bind=engine)
 # register router
-Base.include_router(bind=engine)
+app.include_router(note_router)
