@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from .models import Note, NoteCreate, NoteUpdate
 
-router = APIRouter(prefix="/notes/")
+router = APIRouter(prefix="/notes")
 
 #create notes
 @router.post("/", response_model=Note)
