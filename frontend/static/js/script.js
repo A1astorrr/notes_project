@@ -9,11 +9,12 @@ async function fetchNotes() {
     noteList.innerHTML = '';
     notes.forEach(note => {
         const noteItem = document.createElement('div');
-        noteItem.className = 'border p-4 mt-2 rounded bg-white shadow hover:shadow-lg transition';
+        noteItem.className = 'border p-4 mt-2 rounded-lg shadow hover:shadow-lg transition';
         noteItem.innerHTML = `
-            <h2 class="font-bold text-xl text-blue-700 hover:text-blue-500 transition duration-200">${note.title}</h2> <!-- Яркий заголовок -->
-            <p class="text-gray-800">${note.text}</p> <!-- Темный текст заметки -->
-            <div class="mt-4 flex space-x-2">
+            <h2 class="font-bold text-3xl text-white transition duration-200 break-words mb-4">${note.title}</h2> <!-- Яркий заголовок -->
+            <hr></hr>
+            <p class="text-white font-bold break-words mt-4">${note.text}</p> <!-- Темный текст заметки -->
+            <div class="mt-4 flex space-x-2 ">
                 <button class="bg-yellow-500 text-white font-bold rounded-lg p-2 hover:bg-yellow-400 transition duration-200 transform hover:scale-105" onclick="editNote(${note.id}, '${note.title}', '${note.text}')">Редактировать</button>
                 <button class="bg-red-600 text-white font-bold rounded-lg p-2 hover:bg-red-500 transition duration-200 transform hover:scale-105" onclick="deleteNote(${note.id})">Удалить</button>
             </div>
