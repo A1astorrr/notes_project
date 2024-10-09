@@ -10,3 +10,6 @@ __pycache__/
 
 #db stuff
 .notes.db
+
+#tailwind ignore
+node_modules/

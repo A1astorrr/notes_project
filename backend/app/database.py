@@ -4,10 +4,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 # Function for creating session classes that are used to interact with the database.
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import Session
-from fastapi import Depends
-
-
 
 # connection to bd
 DATABASE_URL = "sqlite:///./.notes.db"
